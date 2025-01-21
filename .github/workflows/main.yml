@@ -1,5 +1,8 @@
 name: Deploy Vanilla JavaScript PWA Checklist App
 
+env:
+  APP_NAME: 'PWA Checklist App'
+
 on:
   push:
     branches:
@@ -23,6 +26,8 @@ jobs:
         run: |
           if [ -f package.json ]; then
             npm run build
+            - name: Print Environment Variable
+            - echo "App Name: $APP_NAME"
           fi
 
       - name: Deploy to GitHub Pages
