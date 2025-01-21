@@ -5,8 +5,6 @@ const FILES_TO_CACHE = [
     '/INFO-5146-PWA/style.css',
     '/INFO-5146-PWA/app.js',
     '/INFO-5146-PWA/manifest.json',
-    '/INFO-5146-PWA/icons/icon-128.png',
-    '/INFO-5146-PWA/icons/icon-512.png'
 ];
 
 self.addEventListener('install', (event) => {

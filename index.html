@@ -15,19 +15,11 @@
         <button id="addTaskBtn">Add Task</button>
         <ul id="taskList"></ul>
     </div>
-    <script src="app.js"></script>
+    <script src="app.js" type="module"></script>
     <script>
         window.addEventListener('error', function (event) {
             console.error('Error occurred: ', event.message);
         })
-
-        if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('service-worker.js', {
-                scope: '/INFO-5146-PWA/'
-            })
-                .then(reg => console.log('Service Worker Registered'))
-                .catch(err => console.error('Service Worker Error:', err));
-        }
     </script>
     <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-C4RZ6XT1NM"></script>
