@@ -17,6 +17,10 @@
     </div>
     <script src="app.js"></script>
     <script>
+        window.addEventListener('error', function (event) {
+            console.error('Error occurred: ', event.message);
+        })
+
         if ('serviceWorker' in navigator) {
             navigator.serviceWorker.register('service-worker.js', {
                 scope: '/INFO-5146-PWA/'
